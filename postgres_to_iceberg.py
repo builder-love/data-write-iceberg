@@ -51,11 +51,11 @@ jdbc_url = f"jdbc:postgresql://{host}:{port}/{dbname}"
 
 
 # --- Read from PostgreSQL using the Private IP ---
-print(f"INFO:     Reading data from PostgreSQL table 'prod.latest_project_repos_contributors'")
+print(f"INFO:     Reading data from PostgreSQL view 'prod.v_repo_contributors'")
 df = spark.read \
     .format("jdbc") \
     .option("url", jdbc_url) \
-    .option("dbtable", "prod.latest_project_repos_contributors") \
+    .option("dbtable", "prod.v_repo_contributors") \
     .option("user", user) \
     .option("password", password) \
     .option("driver", "org.postgresql.Driver") \
