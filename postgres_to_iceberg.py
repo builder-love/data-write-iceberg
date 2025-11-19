@@ -10,7 +10,7 @@ GCS_BUCKET = "gs://bl-dataproc-resources"
 # --- Tables to process ---
 # A list of tuples: (source_postgres_table, target_iceberg_table)
 TABLES_TO_CREATE = [
-    ("prod.v_repo_contributors", "public_research.contributor_repo_commits_v3"),
+    ("prod.v_repo_contributors", "public_research.contributor_repo_commits_v4"),
     ("prod.latest_top_contributors", "public_research.contributors")
 ]
 
